@@ -24,7 +24,7 @@ public class ProductoRepository {
         return productoCrudRepository.findByCantidadStockLessThanAndEstado(cantidad, true);
     }
 
-    public Optional<List<Producto>> getProductoByPrecioVentaLessThanPriceAndByCategory(double precioVenta, int idCategoria) {
+    public Optional<List<Producto>> getCheapProductosByCategoria(double precioVenta, int idCategoria) {
         return productoCrudRepository.findByPrecioVentaLessThanAndIdCategoriaOrderByNombreAsc(precioVenta, idCategoria);
     }
 
