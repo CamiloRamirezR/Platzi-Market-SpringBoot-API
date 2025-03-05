@@ -74,6 +74,6 @@ INSERT INTO compras_productos VALUES (1, 49, 2, 16400, true);
 INSERT INTO compras_productos VALUES (1, 24, 1, 4000, true);
 
 -- SE REINICIAN LAS SECUENCIAS SEGÚN LOS DATOS INICIALES
-SELECT setval('public.productos_id_producto_seq', 50, true);
-SELECT setval('public.categorias_id_categoria_seq', 8, true);
+SELECT setval('public.productos_id_producto_seq', (SELECT MAX(id_producto) FROM productos));
+SELECT setval('public.categorias_id_categoria_seq',(SELECT MAX(id_categoria) FROM categorias));
 SELECT setval('public.compras_id_compra_seq', 1, true);

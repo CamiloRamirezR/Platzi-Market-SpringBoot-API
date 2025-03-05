@@ -52,6 +52,9 @@ public class ProductoRepository implements ProductRepository {
     @Override
     public Product save(Product product) {
         Producto producto = mapper.toProducto(product);
+        if (producto.getIdProducto() != null && producto.getIdProducto() == 0) {
+            producto.setIdProducto(null);
+        } // Mapear con ID nulo en vez de id igual a cero
         return mapper.toProduct(productoCrudRepository.save(producto));
     }
 
