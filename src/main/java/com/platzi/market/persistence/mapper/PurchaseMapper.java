@@ -10,7 +10,7 @@ import org.mapstruct.Mappings;
 import java.util.List;
 
 @Mapper(componentModel = "spring", uses = {PurchaseItemMapper.class})
-public interface PruchaseMapper {
+public interface PurchaseMapper {
 
     @Mappings({
             @Mapping(source = "idCompra", target = "purchaseId"),
