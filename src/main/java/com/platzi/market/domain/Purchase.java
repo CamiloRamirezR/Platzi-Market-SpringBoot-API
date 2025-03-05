@@ -6,7 +6,8 @@ import java.util.List;
 public class Purchase {
     private int purchaseId;
     private String clientId;
-    private LocalDateTime paymentMethod;
+    private LocalDateTime date;
+    private String paymentMethod;
     private String comment;
     private String state;
     private List<PurchaseItem> items;
@@ -27,6 +28,14 @@ public class Purchase {
         this.comment = comment;
     }
 
+    public LocalDateTime getDate() {
+        return date;
+    }
+
+    public void setDate(LocalDateTime date) {
+        this.date = date;
+    }
+
     public List<PurchaseItem> getItems() {
         return items;
     }
@@ -35,11 +44,11 @@ public class Purchase {
         this.items = items;
     }
 
-    public LocalDateTime getPaymentMethod() {
+    public String getPaymentMethod() {
         return paymentMethod;
     }
 
-    public void setPaymentMethod(LocalDateTime paymentMethod) {
+    public void setPaymentMethod(String paymentMethod) {
         this.paymentMethod = paymentMethod;
     }
 
