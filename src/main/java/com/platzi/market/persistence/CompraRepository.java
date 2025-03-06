@@ -39,6 +39,9 @@ public class CompraRepository implements PurchaseRepository {
         Compra conoce los productos, y los productos conocen a que compra pertenecen
          */
         Compra compra = mapper.toCompra(purchase);
+        if (compra.getIdCompra() != null && compra.getIdCompra() == 0) {
+            compra.setIdCompra(null);
+        }
         compra.getProductos().forEach(producto -> producto.setCompra(compra));
         return mapper.toPurchase(compraCrudRepository.save(compra));
     }
