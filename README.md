@@ -7,3 +7,8 @@ Siguiendo el curso de Plazti para manejo de [Spring Framework](https://platzi.co
 
 ## Modelo de datos
 Disponible en la [wiki del proyecto](https://github.com/CamiloRamirezR/Platzi-Market-SpringBoot-API/wiki/Modelo-de-datos).
+
+## Documentación Swagger
+Disponible en:
+    
+    http://{HOST}:{PORT}/platzi-market/api/v1/swagger-ui/index.html
